@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +12,108 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Crypt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese texto a encriptar..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QDK-LP-6I3">
+                                <rect key="frame" x="87.5" y="68" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="6uw-4j-sxH"/>
+                                    <constraint firstAttribute="width" constant="200" id="P3j-gs-USY"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJM-rB-6XJ">
+                                <rect key="frame" x="87.5" y="221" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Qtb-g9-jWg"/>
+                                </constraints>
+                                <state key="normal" title="Encriptar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnEncrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5wb-Qe-JJi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYH-Yo-dta">
+                                <rect key="frame" x="142.5" y="283" width="90.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Expr3s10nB1n4r14" borderStyle="roundedRect" placeholder="Llave..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="57L-9v-kpw">
+                                <rect key="frame" x="87.5" y="119" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="cPw-w3-eAh"/>
+                                    <constraint firstAttribute="height" constant="35" id="ick-ou-kCP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Expr3s10nB1n4r14" borderStyle="roundedRect" placeholder="IV..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="22p-Yp-mdJ">
+                                <rect key="frame" x="87.5" y="170" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="a72-Ar-14Y"/>
+                                    <constraint firstAttribute="width" constant="200" id="q3r-GN-VvB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4a1-Di-xi5">
+                                <rect key="frame" x="87.5" y="336" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ZJQ-6c-FYd"/>
+                                </constraints>
+                                <state key="normal" title="Desencriptar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDecrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YfJ-Gh-SSM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPu-ij-3en">
+                                <rect key="frame" x="142.5" y="398" width="90.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="57L-9v-kpw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Z5-nA-3BI"/>
+                            <constraint firstItem="lYH-Yo-dta" firstAttribute="top" secondItem="rJM-rB-6XJ" secondAttribute="bottom" constant="32" id="B6b-qE-Pls"/>
+                            <constraint firstItem="4a1-Di-xi5" firstAttribute="top" secondItem="lYH-Yo-dta" secondAttribute="bottom" constant="32" id="IDC-f8-lYp"/>
+                            <constraint firstItem="22p-Yp-mdJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JFS-oH-HsX"/>
+                            <constraint firstItem="rJM-rB-6XJ" firstAttribute="top" secondItem="22p-Yp-mdJ" secondAttribute="bottom" constant="16" id="KDX-aS-DjI"/>
+                            <constraint firstItem="QDK-LP-6I3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="KS6-ax-MEp"/>
+                            <constraint firstItem="4a1-Di-xi5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ne3-pq-Vc5"/>
+                            <constraint firstItem="rJM-rB-6XJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PAD-VC-4x3"/>
+                            <constraint firstItem="57L-9v-kpw" firstAttribute="top" secondItem="QDK-LP-6I3" secondAttribute="bottom" constant="16" id="QCV-EG-Dhq"/>
+                            <constraint firstItem="vPu-ij-3en" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WQ9-xe-42j"/>
+                            <constraint firstItem="lYH-Yo-dta" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lzi-u8-bCh"/>
+                            <constraint firstItem="QDK-LP-6I3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mfP-sA-nKf"/>
+                            <constraint firstItem="22p-Yp-mdJ" firstAttribute="top" secondItem="57L-9v-kpw" secondAttribute="bottom" constant="16" id="qbY-I2-r6V"/>
+                            <constraint firstItem="vPu-ij-3en" firstAttribute="top" secondItem="4a1-Di-xi5" secondAttribute="bottom" constant="32" id="ush-xe-Sce"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnBack" destination="4a1-Di-xi5" id="BYg-YN-97h"/>
+                        <outlet property="btnOK" destination="rJM-rB-6XJ" id="FFC-ie-GY0"/>
+                        <outlet property="lblDecrypt" destination="vPu-ij-3en" id="xMI-0i-Kon"/>
+                        <outlet property="lblResultado" destination="lYH-Yo-dta" id="qg0-08-jdF"/>
+                        <outlet property="txtCadenaOriginal" destination="QDK-LP-6I3" id="iaa-9B-HKF"/>
+                        <outlet property="txtIV" destination="22p-Yp-mdJ" id="pNF-s8-zIz"/>
+                        <outlet property="txtKey" destination="57L-9v-kpw" id="UEP-31-YDP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

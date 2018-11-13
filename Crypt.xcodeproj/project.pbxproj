@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73AA54196D88EF24BF90CF20 /* Pods_Crypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC260CEA35A5A7FA9C2DB7DB /* Pods_Crypt.framework */; };
 		8C895D7521968588004F5D46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C895D7421968588004F5D46 /* AppDelegate.swift */; };
 		8C895D7721968588004F5D46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C895D7621968588004F5D46 /* ViewController.swift */; };
 		8C895D7A21968588004F5D46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C895D7821968588004F5D46 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		333748F98384C6799DD31A2C /* Pods-Crypt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypt.release.xcconfig"; path = "Pods/Target Support Files/Pods-Crypt/Pods-Crypt.release.xcconfig"; sourceTree = "<group>"; };
 		8C895D7121968588004F5D46 /* Crypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C895D7421968588004F5D46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C895D7621968588004F5D46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		8C895D7B2196859E004F5D46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C895D7E2196859E004F5D46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C895D802196859E004F5D46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC260CEA35A5A7FA9C2DB7DB /* Pods_Crypt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crypt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2A4C513662D2157DB4C9D1C /* Pods-Crypt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Crypt/Pods-Crypt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73AA54196D88EF24BF90CF20 /* Pods_Crypt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D4298967C9FA7E5B2688884 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC260CEA35A5A7FA9C2DB7DB /* Pods_Crypt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8C895D6821968587004F5D46 = {
 			isa = PBXGroup;
 			children = (
 				8C895D7321968588004F5D46 /* Crypt */,
 				8C895D7221968588004F5D46 /* Products */,
+				E20E4D90B3270F55F39C8EE0 /* Pods */,
+				6D4298967C9FA7E5B2688884 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = Crypt;
 			sourceTree = "<group>";
 		};
+		E20E4D90B3270F55F39C8EE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2A4C513662D2157DB4C9D1C /* Pods-Crypt.debug.xcconfig */,
+				333748F98384C6799DD31A2C /* Pods-Crypt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C895D832196859E004F5D46 /* Build configuration list for PBXNativeTarget "Crypt" */;
 			buildPhases = (
+				84870B59878EC38E8EB27F68 /* [CP] Check Pods Manifest.lock */,
 				8C895D6D21968588004F5D46 /* Sources */,
 				8C895D6E21968588004F5D46 /* Frameworks */,
 				8C895D6F21968588004F5D46 /* Resources */,
+				01D44C95D45CB1F251835721 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01D44C95D45CB1F251835721 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Crypt/Pods-Crypt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Crypt/Pods-Crypt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84870B59878EC38E8EB27F68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Crypt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C895D6D21968588004F5D46 /* Sources */ = {
@@ -280,6 +353,7 @@
 		};
 		8C895D842196859E004F5D46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2A4C513662D2157DB4C9D1C /* Pods-Crypt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +372,7 @@
 		};
 		8C895D852196859E004F5D46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 333748F98384C6799DD31A2C /* Pods-Crypt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
